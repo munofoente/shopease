@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/fundo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FazerCompras">
+
+    <!-- Cabeçalho -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/cyan_green"
+        android:gravity="center"
+        android:text="Compras"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!-- Lista de produtos -->
+        <ScrollView
+            android:id="@+id/productListContainer"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/footer">
+
+            <LinearLayout
+                android:id="@+id/productList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <!-- Total e botões -->
+
+        <!-- Botão de adicionar produto -->
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:id="@+id/footer"
+            android:layout_width="395dp"
+            android:layout_height="113dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="59dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="#009688"
+            android:elevation="5dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Total: R$ 0.00"
+        app:layout_constraintStart_toStartOf="@id/footer1"
+        app:layout_constraintBottom_toBottomOf="@id/footer1"
+        app:layout_constraintTop_toTopOf="@id/footer1"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+
+    <!-- botão finalizar compra -->
+    <Button
+        android:layout_marginRight="15dp"
+        android:id="@+id/btnFinalize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/footer1"
+        app:layout_constraintEnd_toEndOf="@id/footer1"
+        app:layout_constraintTop_toTopOf="@id/footer1"
+        android:textStyle="bold"
+        android:text="Finalizar compra" />
+
+    <ImageButton
+        android:id="@+id/btnvoltar"
+        android:layout_width="63dp"
+        android:layout_height="53dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

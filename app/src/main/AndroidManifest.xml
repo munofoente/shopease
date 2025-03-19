@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Shopease"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TesteLogin"
+        tools:targetApi="31">
+
+        <activity android:name=".tela_inicial"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".dialog_editar_produto"
+            android:exported="false" />
+        <activity
+            android:name=".dialog_add_product"
+            android:exported="false" />
+
+        <activity
+            android:name=".TelaPrincipal"
+            android:exported="false" />
+        <activity
+            android:name=".Historico"
+            android:exported="false" />
+        <activity
+            android:name=".FazerCompras"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false"/>
+
+
+    </application>
+
+</manifest>
